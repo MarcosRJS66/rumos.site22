@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,7 +11,8 @@
 <body>
   <header>
     <h1>Rumos Transf & Tour</h1>
-    <nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
       <a href="#destinos">Destinos</a>
@@ -18,35 +20,45 @@
     </nav>
   </header>
 
+  <div class="banner">Bem-vindo a Florianópolis!</div>
+
   <section id="sobre">
     <h2>Sobre Nós</h2>
-    <p>Agência receptiva em Florianópolis com foco em experiências autênticas.</p>
+    <p>Somos a Rumos Transf & Tour, uma agência especializada em turismo receptivo nos Ingleses, Florianópolis. Oferecemos experiências inesquecíveis para quem quer explorar a magia da Ilha da Magia!</p>
   </section>
+
+  <div class="carousel">
+    <button class="carousel-btn left" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-btn right" onclick="nextSlide()">&#10095;</button>
+    <img src="https://images.unsplash.com/photo-1597687216746-94d55b5efd16?auto=format&fit=crop&w=1200&q=80" class="active" alt="Praia dos Ingleses">
+    <img src="https://images.unsplash.com/photo-1584380736980-fcdb72d89374?auto=format&fit=crop&w=1200&q=80" alt="Jurerê Internacional">
+    <img src="https://images.unsplash.com/photo-1584380939477-8c943e3fd090?auto=format&fit=crop&w=1200&q=80" alt="Lagoa da Conceição">
+  </div>
 
   <section id="servicos">
     <h2>Serviços</h2>
     <ul>
-      <li>Transfers do aeroporto</li>
+      <li>Transfers do aeroporto para hotéis e pousadas</li>
       <li>City tours guiados</li>
-      <li>Passeios e trilhas</li>
+      <li>Passeios para praias, trilhas e pontos turísticos</li>
+      <li>Transporte para eventos</li>
     </ul>
   </section>
 
   <section id="destinos">
     <h2>Destinos</h2>
-    <p>Explore os principais pontos da Ilha da Magia.</p>
+    <p>Conheça as principais praias e atrações: Praia dos Ingleses, Jurerê Internacional, Lagoa da Conceição, Santo Antônio de Lisboa, Ribeirão da Ilha e muito mais!</p>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <form onsubmit="return enviarWhatsApp(event)">
-      <input type="text" id="nome" placeholder="Seu nome" required />
-      <input type="email" id="email" placeholder="Seu e-mail" required />
-      <textarea id="mensagem" placeholder="Mensagem" required></textarea>
-      <button type="submit">Solicitar Orçamento</button>
-    </form>
+    <p>Fale com a nossa equipe pelo WhatsApp!</p>
     <a class="btn-whatsapp" href="https://wa.me/5548988788879" target="_blank">Chamar no WhatsApp</a>
   </section>
+
+  <a class="whatsapp-fixo" href="https://wa.me/5548988788879" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+  </a>
 
   <footer>
     <p>&copy; 2025 Rumos Transf & Tour. Todos os direitos reservados.</p>
